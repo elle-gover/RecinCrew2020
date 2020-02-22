@@ -44,7 +44,9 @@ public class Drive extends Command {
     @Override
     protected void execute() {
         double rotation = Robot.oi.getDriverJoystick().getRawAxis(4);
-        double velocity = -Robot.oi.getDriverJoystick().getRawAxis(1);
+        double velocity = Robot.oi.getDriverJoystick().getRawAxis(1);
+        System.out.println("******VELOCITY" + velocity + "******");
+        System.out.println("******ROTATION" + rotation + "******");
 
         Robot.driveTrain.drive(velocity, rotation);
     }

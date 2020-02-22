@@ -1,5 +1,6 @@
 package org.usfirst.frc5756.RecinCrew2020;
 
+import com.analog.adis16448.frc.ADIS16448_IMU;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.SpeedController;
@@ -23,11 +24,14 @@ public class RobotMap {
     public WPI_TalonSRX powercellShooter = new WPI_TalonSRX(7);
 
     //Drivetrain
-    public Spark rightFrontDrivetrain = new Spark(0);
+    public Spark rightFrontDrivetrain = new Spark(2);
     public Spark rightBackDrivetrain = new Spark (1);
     public SpeedControllerGroup rightDrivetrain = new SpeedControllerGroup(rightFrontDrivetrain, rightBackDrivetrain);
-    public Spark leftFrontDrivetrain = new Spark(2);
+    public Spark leftFrontDrivetrain = new Spark(4);
     public Spark leftBackDrivetrain = new Spark (3);
     public SpeedControllerGroup leftDrivetrain = new SpeedControllerGroup(leftFrontDrivetrain, leftBackDrivetrain);
     public DifferentialDrive differentialDrive = new DifferentialDrive(leftDrivetrain, rightDrivetrain);
+
+    //senors
+    public final ADIS16448_IMU imu = new ADIS16448_IMU();
 }
