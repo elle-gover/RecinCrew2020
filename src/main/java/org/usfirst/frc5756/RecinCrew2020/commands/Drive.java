@@ -11,6 +11,8 @@
 
 package org.usfirst.frc5756.RecinCrew2020.commands;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
 import org.usfirst.frc5756.RecinCrew2020.Robot;
 
 /**
@@ -45,8 +47,8 @@ public class Drive extends Command {
     protected void execute() {
         double rotation = Robot.oi.getDriverJoystick().getRawAxis(4);
         double velocity = Robot.oi.getDriverJoystick().getRawAxis(1);
-        System.out.println("******VELOCITY" + velocity + "******");
-        System.out.println("******ROTATION" + rotation + "******");
+        SmartDashboard.putNumber("Velocity", velocity);
+        SmartDashboard.putNumber("Rotation", rotation);
 
         Robot.driveTrain.drive(velocity, rotation);
     }
