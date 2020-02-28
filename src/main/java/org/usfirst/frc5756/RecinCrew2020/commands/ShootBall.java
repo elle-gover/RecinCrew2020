@@ -14,6 +14,7 @@ public class ShootBall extends Command{
     @Override
     protected void execute() {
         Robot.powerCellController.powercellOut(1.0);
+        Robot.powerCellController.powerCellFeed(-1.0);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -26,6 +27,7 @@ public class ShootBall extends Command{
     @Override
     protected void end() {
         Robot.powerCellController.powercellOut(0.0);
+        Robot.powerCellController.powerCellFeed(0.0);
     }
 
     // Called when another command which requires one or more of the same

@@ -1,31 +1,29 @@
 package org.usfirst.frc5756.RecinCrew2020;
 
+import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 //import com.analog.adis16448.frc.ADIS16448_IMU;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
-import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
 
 public class RobotMap {
 
     //Climbing
-    public WPI_TalonSRX telescopicArmExtender = new WPI_TalonSRX(51);
-    public WPI_TalonSRX climbingMotor = new WPI_TalonSRX(52);
+    public WPI_TalonSRX telescopicArmExtender = new WPI_TalonSRX(54);
+    public WPI_TalonSRX climbingMotor = new WPI_TalonSRX(51);
 
     //Wheel spinner thing
     // public WPI_TalonSRX wheelExtender = new WPI_TalonSRX(3);
     // public WPI_TalonSRX wheelSpinner = new WPI_TalonSRX(4);
 
     //Powercell system
-    //public WPI_TalonSRX powercellCollector = new WPI_TalonSRX(53);
-    public Victor powercellCollector = new  Victor(53);
-    //public WPI_TalonSRX powercellFeeder = new WPI_TalonSRX(0);
-    public Victor powercellFeeder =  new Victor(0);
-    public WPI_TalonSRX powercellShooter = new WPI_TalonSRX(54);
-    public WPI_TalonSRX powercellShooter2 = new WPI_TalonSRX(50);
+    public WPI_TalonSRX powercellCollector = new  WPI_TalonSRX(55);
+    public VictorSPX powercellFeeder = new  VictorSPX(50);
+    public WPI_TalonSRX powercellShooter = new WPI_TalonSRX(52);
+    public WPI_TalonSRX powercellShooter2 = new WPI_TalonSRX(53);
 
     //Drivetrain
     public Spark rightFrontDrivetrain = new Spark(2);

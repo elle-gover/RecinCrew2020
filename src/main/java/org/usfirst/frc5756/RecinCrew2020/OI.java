@@ -73,12 +73,12 @@ public class OI {
         powerCellIntakeButton = new JoystickButton(subsysJoystick, 1);
         powerCellIntakeButton.whenPressed(new IntakeCell());
         powercellOuttakeButton = new JoystickButton(subsysJoystick, 2);
-        powercellOuttakeButton.whenPressed(new ShootBall());
+        powercellOuttakeButton.whileHeld(new ShootBall());
         telescopicArmExtentionButton = new JoystickButton(subsysJoystick, 5);
         telescopicArmRetractionButton = new JoystickButton(subsysJoystick, 6);
         climboButton = new JoystickButton(subsysJoystick, 3);
-        telescopicArmExtentionButton.whenPressed(new RaiseClimbingHook());
-        telescopicArmRetractionButton.whenPressed(new LowerClimbHook());
+        telescopicArmExtentionButton.whileHeld(new RaiseClimbingHook());
+        telescopicArmRetractionButton.whileHeld(new LowerClimbHook());
         climboButton.whenPressed(new Climb()); 
 
         

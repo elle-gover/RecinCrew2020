@@ -40,6 +40,7 @@ public class Drive extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
+        Robot.driveTrain.drive(0,0);
     }
 
     // Called repeatedly when this Command is scheduled to run

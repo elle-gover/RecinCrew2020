@@ -26,7 +26,6 @@ public class DriveTrain extends Subsystem {
     public void initDefaultCommand() {
         stop();
         setDefaultCommand(new Drive());
-
     }
 
     @Override
@@ -36,7 +35,7 @@ public class DriveTrain extends Subsystem {
     }
 
     public void drive(double velocity, double rotation) {
-        Robot.robotMap.differentialDrive.arcadeDrive(velocity, rotation);
+        Robot.robotMap.differentialDrive.arcadeDrive(-velocity, -rotation);
     }
 
     public void stop() {
