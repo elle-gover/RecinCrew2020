@@ -48,6 +48,11 @@ public class Drive extends Command {
     protected void execute() {
         double rotation = Robot.oi.getDriverJoystick().getRawAxis(4);
         double velocity = Robot.oi.getDriverJoystick().getRawAxis(1);
+        if (!Robot.oi.speedButton.get()){
+            rotation = rotation * 0.80;
+            velocity = velocity * 0.80;
+        }
+
         SmartDashboard.putNumber("Velocity", velocity);
         SmartDashboard.putNumber("Rotation", rotation);
 

@@ -20,8 +20,8 @@ public class RobotMap {
     // public WPI_TalonSRX wheelSpinner = new WPI_TalonSRX(4);
 
     //Powercell system
-    public WPI_TalonSRX powercellCollector = new  WPI_TalonSRX(55);
-    public VictorSPX powercellFeeder = new  VictorSPX(50);
+    public VictorSPX powercellWindowWhiper = new  VictorSPX(55);
+    //public VictorSPX powercellFeeder = new  VictorSPX(50);
     public WPI_TalonSRX powercellShooter = new WPI_TalonSRX(52);
     public WPI_TalonSRX powercellShooter2 = new WPI_TalonSRX(53);
 

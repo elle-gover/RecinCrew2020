@@ -16,7 +16,7 @@ public class DriveToDistance extends Command {
 
     @Override
     protected void execute() {
-        Robot.driveTrain.drive(1.0, 0.0);
+        Robot.driveTrain.drive(0.5, 0.0);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class DriveToDistance extends Command {
     }
     @Override
     protected void end() {
-    
+        Robot.driveTrain.drive(0.0, 0.0);
     }
 
     @Override

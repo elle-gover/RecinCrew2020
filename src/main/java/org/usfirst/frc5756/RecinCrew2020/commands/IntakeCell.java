@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.command.Command;
 
 public class IntakeCell extends Command {
 
+    public boolean isFinished = false;
     @Override
     protected void initialize() {
     }
@@ -33,5 +34,5 @@ public class IntakeCell extends Command {
     @Override
     protected void interrupted() {
     }
-    
+    //public void setisFinished(boolean isFinished)
 }

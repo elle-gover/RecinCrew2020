@@ -53,7 +53,28 @@ public class Climber extends Subsystem {
     @Override
     public void periodic() {
         // Put code here to be run every loop
-
+        if (Robot.oi.telescopicArmExtentionButton.get()) {
+            raiseTheArm(0.9);
+            lowerTheArm(0);
+            raiseTheBot(0);
+        } else if (Robot.oi.telescopicArmRetractionButton.get()) {
+            lowerTheArm(-0.5);
+            raiseTheArm(0);
+            raiseTheBot(0);
+        } else if (Robot.oi.climboButton.get()) {
+            raiseTheBot(0.8);
+            raiseTheArm(0);
+            lowerTheArm(0);
+        }else if (Robot.oi.unwindClimbButton.get()) {
+            raiseTheBot(-0.8);
+            raiseTheArm(0);
+            lowerTheArm(0);
+        }      
+         else {
+            raiseTheArm(0);
+            lowerTheArm(0);
+            raiseTheBot(0);
+        }
     }
 
     public void raiseTheArm(double speed){
